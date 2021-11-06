@@ -15,8 +15,8 @@ header{
     color: white;
     font-size: 30px;
     font-weight: bold;
-    /* background-image: url('../imgs/plant_header.png'); */
-    background-color: rgb(83, 102, 83);
+    background-image: url('../imgs/plant_header.png');
+    background-color: rgb(240, 248, 240);
     border: 2px solid green;
     height: 70px;
 }
@@ -157,7 +157,7 @@ div.plants_spider{
 }
 
 .howtocont{
-    display: grid;
+    display: inline grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
