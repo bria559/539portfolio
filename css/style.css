@@ -1,0 +1,189 @@
+body{
+    font-family: 'Source Serif Pro','Zen Antique', serif;
+    font-size: 16px;
+    background-image: url('../imgs/wallpaper.jpg');
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    /* background-image: url('../imgs/plant_header.png'); */
+    background-color: rgb(83, 102, 83);
+    border: 2px solid green;
+    height: 70px;
+}
+.nav_links{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+h1{
+    font-size: 24px;
+    
+    text-align: center;
+    margin: 40px;
+}
+
+a{
+    /* color: #54451A; */
+    color: black;
+    text-decoration: none;
+}
+a:hover,
+a:active{
+    text-decoration: underline;
+}
+
+
+.grid-wrapper{
+    display: grid;
+    display: block;
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: 1fr 3fr;
+}
+aside{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: #B69B65;
+    margin-bottom: 20px;
+}
+article{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #9AB663;
+}
+article p{
+    padding-top: 10px;
+}
+
+aside p{
+    padding-bottom: 10px;
+}
+.flex-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    flex-grow: 1;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#cell{
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; */
+    height: 400px;
+    width: 700px;
+    overflow: hidden;
+    text-align: center;
+}
+
+div{
+    /* display: flex;
+    flex-direction: row; */
+    display: table;
+    /* border: 2px solid black; */
+    text-align: center;
+    margin:auto;
+}
+
+
+.plants_spider,
+.plants_jasmine,
+.plants_snake,
+.plants_eucalyptus,
+.plants_devils,
+.herb {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 300px;
+    width: auto;
+    padding: 20px;    
+   }
+
+img{
+    /* max-height: 50%; */
+    /* vertical-align: middle; */
+    margin: auto;
+    display: block;
+    width:60%;
+    height:50%;
+    display: table-cell;
+}
+
+span{
+    /* max-height: 50%; */
+    vertical-align: middle;
+    display: table-cell;
+}
+
+
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+/* .howtocont{
+    display: grid;
+} */
+
+div.plants_spider{
+    /* height: 100px;
+    width: 150px;
+    padding: 10px; */
+    /* content: url('../imgs/spider.jpg'); */
+    
+}
+
+.howtocont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+footer{
+
+    width: 100%;
+    height: 50px ;
+    /* position: fixed;
+    left: 0px;
+    right: 0px; */
+    text-align: center;
+    color: white;
+    background-color: #54451A;
+}
+footer p{
+    text-align: center;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
