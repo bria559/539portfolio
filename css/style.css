@@ -19,6 +19,7 @@ header{
     background-color: #fffff0;
     border: 2px solid green;
     height: 70px;
+    width: 100%;
 }
 .nav_links{
     display: flex;
