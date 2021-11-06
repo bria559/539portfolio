@@ -99,14 +99,10 @@ div{
 }
 
 
-.plants_spider,
-.plants_jasmine,
-.plants_snake,
-.plants_eucalyptus,
-.plants_devils,
+.plants,
 .herb {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-flow: wrap;
     justify-content: flex-start;
     align-items: center;
@@ -120,7 +116,7 @@ img{
     /* vertical-align: middle; */
     margin: auto;
     display: block;
-    width:60%;
+    width:50%;
     height:50%;
     display: table-cell;
 }
