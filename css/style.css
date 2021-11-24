@@ -1,7 +1,7 @@
 body{
-    font-family: 'Source Serif Pro','Zen Antique', serif;
+    font-family:  'Domaine-Medium','Source Serif Pro','Zen Antique', serif;
     font-size: 16px;
-    background-image: url('../imgs/wallpaper.jpg');
+    /* background-image: url('../imgs/wallpaper.jpg'); */
 }
 
 header{
@@ -10,22 +10,27 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+    padding: 80px;
     text-align: center;
     background: #1abc9c;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     background-image: url('../imgs/plant_header.png');
     background-color: #fffff0;
-    border: 2px solid green;
+    border: 2px solid #9AB663;
     height: 70px;
     /* width: 100%; */
 }
+
+main{
+    min-height: 60vh;
+}
 .nav_links{
+    background: #E3E3E3;
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 h1{
@@ -36,7 +41,6 @@ h1{
 }
 
 a{
-    /* color: #54451A; */
     color: black;
     text-decoration: none;
 }
@@ -48,20 +52,20 @@ a:active{
 
 .grid-wrapper{
     display: grid;
-    display: block;
+    /* display: block; */
     grid-template-rows: min-content auto min-content;
     grid-template-columns: 1fr 3fr;
 }
 aside{
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: #B69B65;
+    background-color: #f6f4db;
     margin-bottom: 20px;
 }
 article{
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: #9AB663;
+    background-color: #b1c686;
 }
 article p{
     padding-top: 10px;
@@ -81,21 +85,11 @@ aside p{
 }
 
 #cell{
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center; */
-    height: 400px;
-    width: 700px;
     overflow: hidden;
     text-align: center;
 }
 
 div{
-    /* display: flex;
-    flex-direction: row; */
-    display: table;
-    /* border: 2px solid black; */
     text-align: center;
     margin:auto;
 }
@@ -104,35 +98,30 @@ div{
 .plants,
 .herb {
     display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: auto;
     padding: 20px;
     
    }
 
+
+
 img{
-    /* max-height: 50%; */
-    /* vertical-align: middle; */
     margin: auto;
     display: block;
     width:50%;
     height:50%;
-    display: table-cell;
 }
 
 span{
-    /* max-height: 50%; */
     vertical-align: middle;
     display: table-cell;
 }
 
 
 
-.skip a{
+.skip{
     background: white;
     left: 0;
     padding: 6px;
@@ -142,30 +131,30 @@ span{
     transition: top 1s ease-out;
     z-index: 1;
 }
+.skip:focus{
+    left: 0px;
+    top: 10px;
+}
 
 /* .howtocont{
     display: grid;
 } */
 
 div.plants_spider{
-    /* height: 100px;
-    width: 150px;
-    padding: 10px; */
-    /* content: url('../imgs/spider.jpg'); */
-    
+
 }
 
 .howtocont{
-    display: inline grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
-    font-size: 30px;
+    font-size: 18px;
     text-align: center;
     margin: 20px;
 }
@@ -185,4 +174,50 @@ footer p{
     text-align: center;
     margin-bottom: 10px;
     padding-right: 10px;
+}
+
+
+@media screen and (min-width: 786px) {
+    .plants p{
+        font-size: 18px;
+        width: 40vw
+        
+    }
+    .plants img{
+        width: 40vw;
+    }
+    .plants{
+        flex-flow: row wrap;
+    }
+
+    .herb p{
+        font-size: 18px;
+
+        width: 40vw
+
+    }
+    .herb img{
+        width: 40vw;
+    }
+    .herb{
+        flex-flow: row wrap;
+    }
+    .howtocont{
+        display: grid;
+    }
+    header{
+        font-size: 30px;
+    }
+    .nav_links{
+        flex-flow: row nowrap;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+
+    .skip{
+        -webkit-transition: initial; /* sets to default setting */
+        transition: initial; /* sets to default setting */
+      }
+
 }
