@@ -12,7 +12,7 @@
     <title>Plants & Their Benefits</title>
 </head>
 <body>
-    <a class = "skip" href='#mains' >Skip to Main Content</a>
+    <a class = "skip" href='#mains-content' >Skip to Main Content</a>
     <header>
         <!-- <img src="images/logo.png" alt="#skip" id = "logo"> -->
         <nav>
@@ -20,24 +20,72 @@
                 <li class="nav_item"><a href="index.html">Home </a></li>&nbsp;
                 <li class="nav_item"><a href="plants.html">Plants </a></li>&nbsp;
                 <li class="nav_item"><a href="howto.html">TIPS </a></li>&nbsp;
-                <li class="nav_item"><a href="about.html">About </a></li>&nbsp;
+                <li class="nav_item"><a href="about.html">Weekly </a></li>&nbsp;
             </ul>
         </nav>
     </header>
-    <main id='mains'>
+    <main id='mains-content'>
         <h1>Tips on how to keep your plants healthy</h1>
+        <div class="parallax"></div>
+        <div style="height:100px;background-color:beige;font-size:24px">
+            View these tips and the form below! 
+        </div>
         <div class="howtocont">
             <div class="grid-item">Always check your plants for <b>diseases and pests</b> before purchasing them. If there are diseases or pests, 
-            keep these plants isolated from other healthy plants so the healthy plants are not infected as well.</div>
+            keep these plants isolated from other healthy plants so the healthy plants are not infected as well. You can also use an organic pesticide that is 
+            safe for humans and animals. Sometimes, I make my own pest deterrent with a mix of lemon juice and water or apple cider vinegar and water.</div> 
             <div class="grid-item"> If you want to plant <b>seeds</b> for your houseplants, buy organic seeds from
-                a local business. You can also propogate plants yourself.
+                a local business. You can also propogate plants yourself. In addittion, choose the best potting soil for your plants. Usually, 
+                regular potting soil will suffice, and you can add your own organic compounds from your kitchen to make it even better. I typically add organic egg shells,
+                old lettuce, or carrot peels.
             </div>
-            <div class="grid-item"> To keep your plants growing, you can <b>repot</b> them every 6 months to a year. </div>
+            <div class="grid-item"> To keep your plants growing, you can <b>repot</b> them every 6 months to a year.  You can tell a plant needs to
+            be repotted when the roots are escaping the holes in the bottom of the pot, the leaves are yellowing, and fast flowing water through the soil.
+            Keeping large plants in small pots will stunt its growth and harm the roots. When you move the plant to a new pot, add more potting soil and do not unravel the plant roots,
+        as unraveling it will put the plant into shock and cause it to die.</div>
             <div class="grid-item">Each plant requires a different amount of sunlight and <b>water</b>. Some plants, like baby tears, require 
                 water once a week and low light. Other plants require water more frequently or more sunlight. Research to learn your 
-                plants' specific needs so they can thrive!
+                plants' specific needs so they can thrive! During the winter, some sun-loving plants may need to be moved to a winodw or use an
+                artificial light. Keep in mind, light and heat are not necessarily the same thing. So keep your plants away from heaters, radiators, or fireplaces
+                because it can cause wilting and dehydration.
             </div>
         </div>
+    
+        <h1>Contact Form</h1>
+        <h3>Fill out this contact form to recieve weekly tips!</h3>
+        <form action='https://formspree.io/f/moqragnr' method='POST'>
+            <section class='form'>
+            <label>
+                First name:
+                <input type='text' name='fname' required>
+            </label>
+            </section>
+            <section class='form'>
+            <label>
+                Last name:
+                <input type='text' name='lname' required>
+            </label>
+            </section>
+
+            <section class='form'>
+            <label>
+                Your email:
+                <input type="email" name="_replyto" required>
+              </label>
+            </section>
+            
+            <section class='form'>
+              <label>
+                Any questions?
+                <textarea name="message"></textarea>
+              </label>
+            </section>
+              <!-- your other form fields go here -->
+            <section class='form'>
+              <button type="submit" class='form'>Send</button>
+            </section>
+            
+        </form>
     </main>
     <footer>
         <p>Website by Briana Whyte</p>

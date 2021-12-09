@@ -25,9 +25,10 @@ header{
 
 main{
     min-height: 60vh;
+    padding: 25px;
 }
 .nav_links{
-    background: #E3E3E3;
+    background: cornsilk;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -35,19 +36,32 @@ main{
 
 h1{
     font-size: 24px;
-    
+    background-image: url('../imgs/soil.jpg');
     text-align: center;
-    margin: 40px;
+    margin: 25px;
+    color: cornsilk;
 }
 
 a{
     color: black;
     text-decoration: none;
 }
+
 a:hover,
 a:active{
     text-decoration: underline;
 }
+
+
+/* .nav_links{
+    animation-name: example;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+@keyframes example {
+    from {right: 0px;}
+    to {right: 300px;}
+} */
 
 
 .grid-wrapper{
@@ -112,6 +126,14 @@ img{
     display: block;
     width:50%;
     height:50%;
+    /* object-fit: contain; */
+}
+.img_block{
+    width: 500px;
+    height: 550px;
+}
+.img_block img{
+    object-fit: contain;
 }
 
 span{
@@ -136,28 +158,34 @@ span{
     top: 10px;
 }
 
-/* .howtocont{
-    display: grid;
-} */
-
-div.plants_spider{
-
-}
 
 .howtocont{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: white;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border: 1px solid darkolivegreen;
     padding: 20px;
     font-size: 18px;
     text-align: center;
     margin: 20px;
 }
+
+.parallax {
+    background-image: url("../imgs/houseplant_medium.jpg");
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 footer{
 
@@ -173,8 +201,106 @@ footer{
 footer p{
     text-align: center;
     margin-bottom: 10px;
-    padding-right: 10px;
+    padding: 20px;
 }
+
+.nav_item a{
+    padding: 15px;
+}
+.nav_item a:visited{
+    text-decoration: underline;
+}
+
+.form{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+form{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    background-color: darkolivegreen;
+}
+
+h3{
+    text-align: center;
+    margin: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  
+  .flip-card-front img{
+      width: 100%;
+      height: 100%;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner{
+    transform: rotateY(180deg);
+  }
+
+
+  .flip-card-inner:focus-within{
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: darkolivegreen;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .week p{
+      margin: 20px ;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #fact{
+        animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite
+    }
+
+  @keyframes example {
+    from {background-color: transparent;}
+    to {background-color: cornsilk;}
+    }
 
 
 @media screen and (min-width: 786px) {
@@ -205,6 +331,7 @@ footer p{
     .howtocont{
         display: grid;
     }
+
     header{
         font-size: 30px;
     }
@@ -215,9 +342,16 @@ footer p{
 
 @media screen and (prefers-reduced-motion: reduce){
 
-    .skip{
+    .skip, .flip-card-inner{
         -webkit-transition: initial; /* sets to default setting */
         transition: initial; /* sets to default setting */
       }
+    
+    .parallax {
+    background-attachment: local;
+    }
 
+    #fact{
+        animation: none;
+    }
 }
