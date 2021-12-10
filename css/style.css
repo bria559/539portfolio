@@ -115,11 +115,10 @@ img{
 }
 
 
-span{
+/* span{
     vertical-align: middle;
     display: table-cell;
-}
-
+} */
 
 
 .skip{
@@ -155,7 +154,7 @@ span{
 }
 
 .parallax {
-    background-image: url("../imgs/houseplant_medium.jpg");
+    background-image: url("../imgs/soil2.jpg");
     /* Set a specific height */
     min-height: 500px; 
   
@@ -326,7 +325,9 @@ h2{
         width: 500px;
         height: 550px;
     } */
-    
+    .parallax {
+        background-image: url("../imgs/houseplant_medium.jpg");
+    }
     .img_block img{
         object-fit: contain;
     }
